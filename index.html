@@ -401,16 +401,14 @@
             <h1 class="text-3xl md:text-4xl font-bold text-gray-800">Mon Tableau de Bord de Révision ✨</h1>
             <p class="text-lg text-gray-500 mt-2">Objectif: Certification Gestionnaire de Paie</p>
             
-            <div class="absolute right-0 top-0 flex flex-col items-end gap-2 pr-4 z-10 header-no-print"> <!-- Vertical alignment on right, added z-index and header-no-print -->
-                <button id="print-button" class="bg-orange-500 hover:bg-orange-600 text-white font-bold header-action-button">🖨️</button>
+            <div class="absolute right-0 top-0 flex flex-col items-end gap-2 pr-4 z-10 header-no-print"> <button id="print-button" class="bg-orange-500 hover:bg-orange-600 text-white font-bold header-action-button">🖨️</button>
                 <button id="theme-toggle" class="bg-gray-700 hover:bg-gray-800 text-white font-bold header-action-button">☀️</button>
                 <button id="sound-toggle" class="bg-pink-500 hover:bg-pink-600 text-white font-bold header-action-button">🔊</button>
                 <button id="focus-mode-toggle" class="bg-green-700 hover:bg-green-800 text-white font-bold header-action-button">🎯</button>
             </div>
 
             <div id="welcome-message" class="text-center p-8 rounded-lg welcome-message-bg mb-6">
-                <!-- Content will be dynamically updated by JS -->
-            </div>
+                </div>
 
             <div class="mt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
                 <div class="flex items-center gap-2">
@@ -451,10 +449,10 @@
                 <button id="open-infos-comp-modal" class="bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
                     Infos ℹ️
                 </button>
-                <a href="https://mmpa.mmpaisley-paie-sirh.com/Paie/Reussir%20sa%20Certification%20Paie/L'Armada%20des%20Sigles%20RH%20&%20Sociaux%20:%20Debloquez%20la%20Puissance%20de%20Votre%20Connaissance.html" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
+                <a href="https://mmpa1974.github.io/Acronyme-Paie-Academy---Guide-Ultime/" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
                     Acronymes 🚀
                 </a>
-                <a href="https://mmpa.mmpaisley-paie-sirh.com/Paie/Reussir%20sa%20Certification%20Paie/Glossaire%20de%20la%20Paie%20et%20RH.html" target="_blank" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
+                <a href="https://mmpa1974.github.io/Glossaire-de-la-Paie-et-RH-Votre-Compagnon-Expert/" target="_blank" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
                     Glossaire 📖
                 </a>
                 <button id="open-library-modal" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
@@ -1132,7 +1130,7 @@ B3_M5_010_Synthèse et application : Assister les utilisateurs du SIRH`;
             ]},
             { id: 's3-4', title: 'Semaines 3-4: Les Absences et Impacts Complexes ⏳', durationDays: 14, phase: 1, modules: [
                 { title: 'Module 2.1: Gestion des Absences Maladie/Maternité 🏥', quizId: 'B1_M6_006_La_gestion_des_arrets_de_travail', tasks: [
-                    {text: 'Calcul et gestion des indemnités journalières de Sécurité Sociale (IJSS) : conditions, délais de carence.', suggestedCourses: ['B1_M3_012_La rémunération brute : l’arrêt de travail, la retenue pour absence, la subrogation et les IJSS']},
+                    {text: 'Calcul et gestion des indemnités journalières de Sécurité Sociale (IJSS) : conditions, délais de carence.', suggestedCourses: ['B1_M3_012_La rémunération brute : l’arrêt de travail, la subrogation et les IJSS']},
                     {text: 'Mise en œuvre du complément employeur : règles légales, conventionnelles, subrogation.', suggestedCourses: ['B1_M3_013_La rémunération brute : l’arrêt de travail et le complément employeur']},
                     {text: 'Traitement des accidents du travail et maladies professionnelles : déclaration, calcul des indemnités, impact sur le contrat.'},
                     {text: 'Gestion des absences pour maternité, paternité, adoption : droits, durée, calcul des indemnités.'},
@@ -1231,7 +1229,7 @@ B3_M5_010_Synthèse et application : Assister les utilisateurs du SIRH`;
                     {text: 'Visualiser votre réussite et rester confiant.'}
                 ]}
             ]},
-            { id: 'jour-j', title: 'Le Jour J 🎉', durationDays: 2, phase: 2, 
+            { id: 'jour-j', title: 'Le Jour J 🎉', durationDays: 2, phase: 2,
                 modules: [ // This now represents the actual exam structure
                     { title: 'Bloc 1: Gérer la paie et les déclarations sociales (10h) 📊', tasks: [
                         {text: 'Compétence C1.1: Paramétrer le logiciel de paie (éléments d\'identification, infos collaborateurs, éléments fixes, cotisations et taux).'},
