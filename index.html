@@ -398,17 +398,19 @@
     <div class="container mx-auto p-4 md:p-8 max-w-7xl">
         
         <header class="text-center mb-8 relative">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-800">Mon Tableau de Bord de Révision ✨</h1>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800">Suivi & Révision des Compétences – Gestionnaire de Paie ✨</h1>
             <p class="text-lg text-gray-500 mt-2">Objectif: Certification Gestionnaire de Paie</p>
             
-            <div class="absolute right-0 top-0 flex flex-col items-end gap-2 pr-4 z-10 header-no-print"> <button id="print-button" class="bg-orange-500 hover:bg-orange-600 text-white font-bold header-action-button">🖨️</button>
+            <div class="absolute right-0 top-0 flex flex-col items-end gap-2 pr-4 z-10 header-no-print"> <!-- Vertical alignment on right, added z-index and header-no-print -->
+                <button id="print-button" class="bg-orange-500 hover:bg-orange-600 text-white font-bold header-action-button">🖨️</button>
                 <button id="theme-toggle" class="bg-gray-700 hover:bg-gray-800 text-white font-bold header-action-button">☀️</button>
                 <button id="sound-toggle" class="bg-pink-500 hover:bg-pink-600 text-white font-bold header-action-button">🔊</button>
                 <button id="focus-mode-toggle" class="bg-green-700 hover:bg-green-800 text-white font-bold header-action-button">🎯</button>
             </div>
 
             <div id="welcome-message" class="text-center p-8 rounded-lg welcome-message-bg mb-6">
-                </div>
+                <!-- Content will be dynamically updated by JS -->
+            </div>
 
             <div class="mt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
                 <div class="flex items-center gap-2">
@@ -440,24 +442,12 @@
             </div>
 
             <div class="mt-6 flex flex-wrap justify-center gap-4 header-no-print">
-                <button id="open-checklist-modal" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
-                    Checklist ✅
-                </button>
-                <button id="open-certif-details-modal" class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
-                    Certification 🎓
-                </button>
-                <button id="open-infos-comp-modal" class="bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
-                    Infos ℹ️
-                </button>
-                <a href="https://mmpa1974.github.io/Acronyme-Paie-Academy---Guide-Ultime/" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
+                <a href="https://mmpa1974.github.io/Acronyme-Paie-Academy---Guide-Ultime/" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
                     Acronymes 🚀
                 </a>
-                <a href="https://mmpa1974.github.io/Glossaire-de-la-Paie-et-RH-Votre-Compagnon-Expert/" target="_blank" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
+                <a href="https://mmpa1974.github.io/Glossaire-de-la-Paie-et-RH-Votre-Compagnon-Expert/" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
                     Glossaire 📖
                 </a>
-                <button id="open-library-modal" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
-                    Bibliothèque 📚
-                </button>
                 <a href="https://docs.google.com/spreadsheets/d/12Z3vh4jJ9_5kZDF5WkSkTdl_2-WxqDlL8YB7_B9BguI/edit?gid=0#gid=0" target="_blank" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
                     Révision 📝
                 </a>
@@ -553,159 +543,11 @@
         </footer>
     </div>
 
-    <div id="checklist-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" id="close-checklist-modal">&times;</span>
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Checklist "Prêt pour le Jour J" ✅</h2>
-            <p class="mb-4 text-gray-700">Voici une liste de choses importantes à faire 2 jours avant votre examen pour maximiser vos chances de succès et réduire le stress :</p>
-            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                <li>😴 <strong>Dormir suffisamment :</strong> Visez 7 à 9 heures de sommeil de qualité. Un cerveau reposé est un cerveau performant !</li>
-                <li>🍎 <strong>Manger sainement :</strong> Privilégiez des repas équilibrés et légers. Évitez les aliments trop gras ou trop sucrés.</li>
-                <li>🧘‍♀️ <strong>Se détendre :</strong> Faites des activités relaxantes (lecture, musique, courte promenade). Évitez le stress de dernière minute et le "bourrage de crâne".</li>
-                <li>🎒 <strong>Préparer vos affaires :</strong> Rassemblez tous les documents nécessaires (pièce d'identité, convocation), stylos, calculatrice (si autorisée), montre.</li>
-                <li>💬 <strong>Pensée positive :</strong> Visualisez votre réussite et ayez confiance en vos capacités. Vous avez travaillé dur !</li>
-                <li>💧 <strong>Hydratation :</strong> Buvez de l'eau régulièrement.</li>
-                <li>🚶‍♀️ <strong>Activité légère :</strong> Une courte marche peut aider à clarifier les idées et à réduire l'anxiété.</li>
-            </ul>
-            <p class="mt-4 text-center text-accent-main font-semibold">Vous êtes prêt(e) à briller ! Bonne chance ! 🌟</p>
-        </div>
-    </div>
-
-    <div id="certif-details-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" id="close-certif-details-modal">&times;</span>
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Votre Certification en Détail : Gestionnaire de Paie 🎓</h2>
-            
-            <div class="space-y-4 text-gray-700">
-                <p><strong>Titre RNCP :</strong> Gestionnaire de paie</p>
-                <p><strong>Code RNCP :</strong> RNCP38019</p>
-                <p><strong>Niveau de qualification :</strong> Niveau 5</p>
-                <p><strong>Certificateur :</strong> Studi</p>
-                <p><strong>Date d'échéance de l'enregistrement :</strong> 20-09-2025</p>
-
-                <h3 class="text-xl font-semibold text-gray-800 mt-6">Objectifs et Contexte de la Certification :</h3>
-                <p class="text-sm">Le gestionnaire de paie recueille, contrôle et traite les éléments constitutifs de la rémunération des collaborateurs afin d’assurer la production des bulletins de paie. Avec la modernisation des logiciels et l'intégration de l'AI, le métier évolue vers le contrôle des données, l'analyse des écarts et le diagnostic des anomalies. Il joue un rôle de support et de conseil auprès des décideurs et collaborateurs sur les questions juridiques et techniques relatives à la paie ou à la gestion du personnel. Cette certification a été élaborée pour répondre aux enjeux du marché et aux nouveaux besoins en compétences.</p>
-
-                <h3 class="text-xl font-semibold text-gray-800 mt-6">Activités Visées :</h3>
-                <ul class="list-disc list-inside text-sm space-y-1">
-                    <li>Gestion de la paie et des déclarations sociales (Paramétrage logiciel, Collecte/Traitement variables, Contrôle/Édition bulletins, Gestion déclarations sociales, Analyse écarts paie/comptabilité).</li>
-                    <li>Gestion administrative du personnel (Établissement contrats, Traitement entrées/Sorties, Gestion dossiers personnel, Communication partenaires externes).</li>
-                    <li>Conseil et assistance auprès des décideurs et des collaborateurs (Veille juridique, Diagnostic conformité paie, Communication collaborateurs/managers, Conception reporting/aide décision, Assistance utilisateurs SIRH).</li>
-                </ul>
-
-                <h3 class="text-xl font-semibold text-gray-800 mt-6">Compétences Attestées :</h3>
-                <ul class="list-disc list-inside text-sm space-y-1">
-                    <li>Paramétrer le logiciel de paie en tenant compte de la réglementation applicable, de la politique de rémunération et de l'effectif, en actualisant les bases de données et configurant les caisses de cotisation et contrats spécifiques.</li>
-                    <li>Collecter et traiter l'ensemble des éléments de rémunération variable en vérifiant l'exactitude des informations, calculant les indemnités dues et saisissant les données dans le logiciel de paie.</li>
-                    <li>Contrôler et éditer les bulletins de paie en vérifiant les bases, taux, réductions, salaire net imposable, PAS et net à payer, pour détecter et corriger les anomalies.</li>
-                    <li>Réaliser l'ensemble des déclarations sociales nominatives (arrêts de travail, DOETH, taxe apprentissage, impôts sur le revenu, etc.) en veillant à leur exactitude et au respect des échéances.</li>
-                    <li>Identifier et analyser les écarts entre la paie et la comptabilité en collaboration avec le service comptable, en réalisant un rapprochement et proposant des actions correctrices.</li>
-                    <li>Rédiger les contrats de travail et les avenants en s’appuyant sur les informations recueillies et en veillant au respect du droit du travail.</li>
-                    <li>Réaliser les formalités d’embauche et de sortie des collaborateurs en produisant les documents obligatoires, procédant aux déclarations et affiliations, et tenant à jour le registre du personnel.</li>
-                    <li>Constituer et tenir à jour les dossiers du personnel au moyen d’outils numériques, en respectant le RGPD and la non-discrimination, et en informing les collaborateurs sur leurs droits.</li>
-                    <li>Communiquer avec les partenaires externes (URSSAF, Médecine du travail, etc.) en transmettant les documents et informations demandées et en respectant les codes et usages.</li>
-                    <li>Réaliser une veille juridique mobilisant des méthodologies de recherche, de traitement et de diffusion de données pour mettre en œuvre les évolutions impactant la gestion des paies et l’administration du personnel.</li>
-                    <li>Diagnostiquer la conformité de la paie en analysant la documentation, questionnant les décideurs et le comptable, et identifiant les écarts, risques et actions correctrices.</li>
-                    <li>Communiquer avec les collaborateurs et managers via différents canaux, en répondant à leurs questions juridiques et de paie, avec pédagogie et en tenant compte des besoins spécifiques des personnes en situation de handicap.</li>
-                    <li>Réaliser des tableaux de bord (masse salariale, entrées/sorties, effectif, absences…), en exploitant les données du logiciel de paie/SIRH, et en utilisant un logiciel tableur.</li>
-                    <li>Accompagner les collaborateurs et managers dans l’utilisation du SIRH en élaborant des modes opératoires et en veillant à l’accessibilité des supports.</li>
-                </ul>
-
-                <h3 class="text-xl font-semibold text-gray-800 mt-6">Type d'emplois accessibles :</h3>
-                <ul class="list-disc list-inside text-sm space-y-1">
-                    <li>Gestionnaire paie et administration du personnel</li>
-                    <li>Collaborateur paie</li>
-                    <li>Chargé de paie</li>
-                    <li>Assistant paie</li>
-                </ul>
-
-                <p class="mt-6 text-center text-sm">Pour plus d'informations et le taux d'insertion, consultez la fiche RNCP officielle sur le site de France Compétences :</p>
-                <p class="text-center"><a href="https://www.francecompetences.fr/recherche/rncp/38019/" target="_blank" class="text-accent-main hover:underline">Fiche RNCP38019 sur France Compétences</a></p>
-            </div>
-        </div>
-    </div>
-
-    <div id="infos-comp-modal" class="modal">
-        <div class="modal-content max-w-2xl">
-            <span class="close-button" id="close-infos-comp-modal">&times;</span>
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Infos Complémentaires & Ressources ℹ️</h2>
-            
-            <div class="space-y-6 text-gray-700 text-sm">
-                <h3 class="text-xl font-semibold text-gray-800">👋 Votre Newsletter & Actus !</h3>
-                <p>Retrouvez chaque mois les actualités, suggestions de lives et rappels de vos dates clés. Consultez-la le premier vendredi du mois pour être à jour !</p>
-                <p><a href="https://app.comptalia.com/v3/blog" target="_blank" class="text-accent-main hover:underline font-bold">Accéder à la Newsletter</a></p>
-
-                <h3 class="text-xl font-semibold text-gray-800 mt-6">🚨 Deadlines Examens</h3>
-                <ul class="list-disc list-inside space-y-1">
-                    <li><strong>Promo DE VINCI (Décembre 2025)</strong>
-                        <ul class="list-circle list-inside ml-4">
-                            <li>Session 1 : du 27/10/2025 (11h00) au 21/11/2025 (23h59)</li>
-                            <li>Session 2 : du 13/01/2026 (11h00) au 30/01/2026 (23h59)</li>
-                        </ul>
-                    </li>
-                    <li><strong>Promo PASTEUR (Mai 2026)</strong>
-                        <ul class="list-circle list-inside ml-4">
-                            <li>Session 1 : du 12/05/2026 (11h00) au 06/06/2026 (23h59)</li>
-                            <li>Session 2 : du 07/07/2026 (11h00) au 25/07/2026 (23h59)</li>
-                        </ul>
-                    </li>
-                    <li><strong>Promo COPERNIC (Octobre 2026)</strong>
-                        <ul class="list-circle list-inside ml-4">
-                            <li>Session 1 : du 26/10/2026 (11h00) au 20/11/2026 (23h59)</li>
-                            <li>Session 2 : du 12/01/2027 (11h00) au 29/01/2027 (23h59)</li>
-                        </ul>
-                    </li>
-                </ul>
-                <p class="italic text-sm">Les examens sont en asynchrone et non-chronométrés. Cliquez sur “activer les modifications” pour accéder à la copie à rendre.</p>
-
-                <h3 class="text-xl font-semibold text-gray-800 mt-6">📺 Lives et Replays clés</h3>
-                <ul class="list-disc list-inside space-y-1">
-                    <li><strong>Lives de Suivi Pédagogique :</strong> Animés par les Responsables Pédagogiques.
-                        <ul class="list-circle list-inside ml-4">
-                            <li>Prochaines dates : 01/07/2025, 08/07/2025, 15/07/2025 (selon votre promo).</li>
-                        </ul>
-                    </li>
-                    <li><strong>Lives Sprint Examen :</strong> Sessions spécifiques pour les blocs 1, 2 et 3.
-                        <ul class="list-circle list-inside ml-4">
-                            <li>Ex: 03/04/2025 (12:30-13:30) pour Bloc 2 et 3.</li>
-                            <li>Ex: 25/04/2025 (12:00-14:00) pour Bloc 1.</li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <h3 class="text-xl font-semibold text-gray-800 mt-6">📊 Le Crédit d’Impôt Famille (CIF)</h3>
-                <p>Un dispositif accessible aux entreprises pour financer des services liés à la famille. Peut aller jusqu’à 500 000 €/an. Dirigeants non-salariés éligibles sous conditions. Formulaires 2069-FA-SD, 2069-RCI-SD.</p>
-                <p class="mt-2 text-center"><a href="https://entreprendre.service-public.fr/vosdroits/R19937" target="_blank" class="text-accent-main hover:underline">Plus d'infos sur service-public.fr</a></p>
-
-                <h3 class="text-xl font-semibold text-gray-800 mt-6">📚 Votre Formation : Graduate Gestionnaire de Paie</h3>
-                <p>Titre RNCP niveau 5 (RNCP38019) de STUDI, validé par 3 blocs de compétences. Durée : 380h (continue) / 609h (alternance).</p>
-                <p class="mt-2 text-center"><a href="https://www.francecompetences.fr/recherche/rncp/38019/" target="_blank" class="text-accent-main hover:underline">Fiche RNCP38019 sur France Compétences</a></p>
-
-                <h3 class="text-xl font-semibold text-gray-800 mt-6">👥 Votre Équipe Pédagogique</h3>
-                <p>Composée de Responsables de Filière, Responsables Pédagogiques, Assistants et Formateurs Référents experts dans chaque domaine. Contact via le forum ou les Lives.</p>
-
-                <h3 class="text-xl font-semibold text-gray-800 mt-6">🗳️ Délégués de Formation</h3>
-                <p>Candidatures ouvertes pour représenter vos camarades et améliorer la formation (date limite 06 oct. 2024). Plus de détails sur la plateforme.</p>
-
-                <h3 class="text-xl font-semibold text-gray-800 mt-6">💼 Coaching Carrière</h3>
-                <p>Service dédié au suivi professionnel (stages, alternance, recherche d'emploi, démarches administratives). Ateliers disponibles via l'onglet "Live".</p>
-                <p class="mt-2 text-center"><a href="[Lien vers WORKSHOP COACHING CARRIERE : La stratégie efficace pour chercher une alternance/emploi | Tout public]" target="_blank" class="text-accent-main hover:underline">Exemple de replay : Stratégie recherche alternance/emploi</a></p>
-
-                <h3 class="text-xl font-semibold text-gray-800 mt-6">📝 Évaluations & Examens</h3>
-                <p>3 Certificats Studi et 4 Évaluations Certifiantes Asynchrones sont à réaliser (1 écrit Bloc 1, 1 écrit Bloc 2, 1 écrit et 1 oral Bloc 3). Inscriptions automatiques, convocations un mois avant. Les compétences acquises sont définitives en cas d'échec.</p>
-
-                <h3 class="text-xl font-semibold text-gray-800 mt-6">🧑‍💻 Stages & Alternance</h3>
-                <p>Stage facultatif (recommandé 2 mois/280h) en cabinet comptable ou service RH. Missions variées liées au droit du travail et gestion de la paie.</p>
-                <p class="mt-2 text-center"><a href="[Lien vers offre de stage Groupe CYA]" target="_blank" class="text-accent-main hover:underline">Offre de stage Groupe CYA</a></p>
-
-                <h3 class="text-xl font-semibold text-gray-800 mt-6">🚀 Poursuite d'études suggérées par Studi :</h3>
-                <p>Bachelor Pilotage RH, Bachelor Paie et Social, MBA Manager stratégique des RH. Replay sur la poursuite d'études disponible.</p>
-                <p class="mt-2 text-center"><a href="[Lien vers replay poursuite d’études]" target="_blank" class="text-accent-main hover:underline">Replay Poursuite d'études</a></p>
-
-                <p class="mt-4 text-right italic">Pour toute question, contactez votre équipe pédagogique via le forum ou les Lives.</p>
-            </div>
-        </div>
-    </div>
+    <!-- Modals removed as per user request -->
+    <!-- Checklist Modal (Removed) -->
+    <!-- Certification Details Modal (Removed) -->
+    <!-- Infos Complémentaires Modal (Removed) -->
+    <!-- Bibliothèque Modal (Removed) -->
 
     <div id="quiz-modal" class="modal">
         <div class="modal-content quiz-modal-content">
@@ -726,200 +568,6 @@
                 <p id="quiz-score" class="text-2xl font-bold text-accent-main mt-2"></p>
                 <p id="quiz-result-message" class="text-gray-700 mt-2"></p>
                 <button id="quiz-review-button" class="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300">Revoir les Réponses</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="library-modal" class="modal">
-        <div class="modal-content max-w-2xl">
-            <span class="close-button" id="close-library-modal">&times;</span>
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">🌟 Votre Passeport Vers l'Excellence : Guide Complet pour la Formation et l'Épanouissement 🌟</h2>
-            <p class="mb-4 text-gray-700 text-center italic">Cher futur professionnel certifié,</p>
-            <p class="mb-6 text-gray-700">Ce guide a été conçu comme un compagnon essentiel pour votre parcours. Il regroupe une sélection méticuleuse d'ouvrages et de ressources, pensés pour décupler vos compétences techniques en gestion de paie, tout en nourrissant votre développement personnel. Et parce que l'équilibre est la clé de toute réussite durable, une section dédiée à la détente et à l'évasion littéraire vous attend pour des moments bien mérités.</p>
-            <p class="mb-8 text-gray-700 font-bold text-center">Préparez-vous à enrichir vos connaissances et à cultiver votre bien-être !</p>
-
-            <div class="bg-blue-50 p-6 rounded-lg shadow-inner mb-8">
-                <h3 class="text-xl font-semibold text-indigo-700 mt-2 mb-4">I. 🚀 Développement Personnel : Déployez Votre Plein Potentiel</h3>
-                <p class="mb-4 text-gray-700">Booster votre croissance personnelle est un pilier fondamental de votre succès professionnel. Ces livres inspirants vous offrent des clés pour une meilleure connaissance de soi, une communication plus efficace et une vie plus équilibrée.</p>
-                <ul class="list-disc list-inside space-y-3">
-                    <li>
-                        <strong>Les Quatre Accords Toltèques</strong> de Don Miguel Ruiz : Un chemin lumineux vers la liberté personnelle, ancré dans une sagesse ancestrale.<br>
-                        <a href="https://www.fnac.com/a1073199/Don-Miguel-Ruiz-Les-quatre-accords-tolteques" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-les-quatre-accords-tolteques-9782868297921.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>Le Cinquième Accord Toltèque</strong> de Don Miguel Ruiz et Don Jose Ruiz : Une exploration plus profonde des principes toltèques pour une transformation encore plus significative.<br>
-                        <a href="https://www.fnac.com/a6448777/Don-Miguel-Ruiz-Le-cinquieme-accord-teque" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-le-cinquieme-accord-tolteque-9782868299826.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>The Miracle Morning</strong> d'Hal Elrod : Adoptez une routine matinale révolutionnaire pour dynamiser chaque journée et concrétiser vos aspirations les plus chères.<br>
-                        <a href="https://www.fnac.com/a9768994/Hal-Elrod-The-miracle-morning" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-the-miracle-morning-9782813210350.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>L'Art subtil de s'en foutre</strong> de Mark Manson : Un contre-guide audacieux pour identifier l'essentiel et se libérer des futilités qui nous encombrent.<br>
-                        <a href="https://www.fnac.com/a11409559/Mark-Manson-L-art-subtil-de-s-en-foutre" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-l-art-subtil-de-s-en-foutre-9782212568712.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>Avoir le courage de ne pas être aimé</strong> d'Ichiro Kishimi et Fumitake Koga : Découvrez les principes de la psychologie adlérienne pour atteindre le bonheur en toute autonomie.<br>
-                        <a href="https://www.fnac.com/a13898158/Ichiro-Kishimi-Avoir-le-courage-de-ne-pas-etre-aime" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-avoir-le-courage-de-ne-pas-etre-aime-9782379310706.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>Avoir le courage d'être heureux</strong> de Ichiro Kishimi et Fumitake Koga : La suite captivante, explorant how to apply the teachings adlériens for a life more épanouie.<br>
-                        <a href="https://www.fnac.com/a15998157/Ichiro-Kishimi-Avoir-le-courage-d-etre-heureux" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-avoir-le-courage-d-etre-heureux-9782379311222.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>Atomic Habits</strong> de James Clear : Maîtrisez l'art des petites habitudes pour des changements significatifs et durables.<br>
-                        <a href="https://www.fnac.com/a13809051/James-Clear-Atomic-habits" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-atomic-habits-9781847941831.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>L'Art de l'essentiel</strong> de Greg McKeown : Apprenez à vous concentrer sur ce qui compte vraiment pour une efficacité maximale et un stress minimal.<br>
-                        <a href="https://www.fnac.com/a6813352/Greg-McKeown-L-art-de-l-essentiel" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-l-art-de-l-essentiel-9782708940383.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>S'organiser pour réussir (Getting Things Done - GTD)</strong> de David Allen : La méthode de référence pour une organisation personnelle et professionnelle sans faille.<br>
-                        <a href="https://www.fnac.com/a1600000/David-Allen-S-organiser-pour-reussir-la-methode-GTD" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-s-organiser-pour-reussir-la-methode-gtd-9782212567289.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>L'intelligence émotionnelle</strong> de Daniel Goleman : Un classique pour maîtriser ses émotions et celles des autres, clé des relations humaines réussies.<br>
-                        <a href="https://www.fnac.com/a1061980/Daniel-Goleman-L-intelligence-emotionnelle" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-l-intelligence-emotionnelle-9782290076707.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>Commencer par le pourquoi</strong> de Simon Sinek : Découvrez le pouvoir de la raison d'être pour inspirer et motiver, dans tous les aspects de votre vie.<br>
-                        <a href="https://www.fnac.com/a6225442/Simon-Sinek-Commencer-par-le-pourquoi" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-commencer-par-le-pourquoi-9782212555026.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bg-green-50 p-6 rounded-lg shadow-inner mb-8">
-                <h3 class="text-xl font-semibold text-teal-700 mt-2 mb-4">II. 📈 Maîtrise de la Paie : Les Références pour les Professionnels Avertis</h3>
-                <p class="mb-4 text-gray-700">Pour exceller en tant que gestionnaire de paie, une connaissance approfondie et constamment actualisée de la législation est indispensable. Voici les ouvrages et ressources les plus récents pour développer et maintenir votre expertise.</p>
-                <ul class="list-disc list-inside space-y-3">
-                    <li>
-                        <strong>La Paie Tout-en-un 2025</strong> (ou la dernière édition disponible) : Un ouvrage complet et actualisé, idéal pour une compréhension globale et pratique de toutes les facettes de la paie.<br>
-                        <span class="text-gray-600 italic text-sm">Note : La version 2025 n'est pas encore disponible à l'heure actuelle (juillet 2025), les éditions sortant généralement en fin d'année pour l'année suivante. Vérifiez régulièrement la disponibilité.</span><br>
-                        <a href="https://www.fnac.com/SearchResult/Result.aspx?SCat=0%211&Search=la+paie+tout+en+un&sft=1&sa=0" target="_blank" class="text-accent-main hover:underline font-bold">Recherche sur FNAC</a> |
-                        <a href="https://www.cultura.com/recherche/resultats?search=la%20paie%20tout%20en%20un" target="_blank" class="text-accent-main hover:underline font-bold">Recherche sur Cultura</a>
-                    </li>
-                    <li>
-                        <strong>Mémento Paie des éditions Francis Lefebvre</strong> (édition la plus récente) : L'ouvrage de référence par excellence pour une information juridique et pratique exhaustive. Indispensable pour toute question complexe ou spécifique.<br>
-                        <a href="https://boutique.efl.fr/collection/memento-paie" target="_blank" class="text-accent-main hover:underline font-bold">Site EFL (sélectionnez la dernière édition)</a>
-                    </li>
-                    <li>
-                        <strong>La Revue Fiduciaire (RF Social / RF Paie)</strong> : Pour une veille constante et des analyses approfondies sur l'actualité sociale et les évolutions de la paie.<br>
-                        <a href="https://www.revuefiduciaire.fr/boutique/themes/paie" target="_blank" class="text-accent-main hover:underline font-bold">Site Revue Fiduciaire</a>
-                    </li>
-                    <li>
-                        <strong>Lamy Paie (Wolters Kluwer)</strong> : Un éditeur majeur proposant des guides pratiques et des actualisations régulières sur le droit social et la gestion de la paie.<br>
-                        <a href="https://www.wolterskluwer.fr/actualites-et-expertises/droit-social/" target="_blank" class="text-accent-main hover:underline font-bold">Site Wolters Kluwer (Droit Social)</a>
-                    </li>
-                    <li>
-                        <strong>Le Guide de la paie - Édition annuelle</strong> (par exemple, des éditions Vuibert ou Gualino) : Des ouvrages didactiques, parfaits pour une approche pédagogique et une compréhension globale avant d'approfondir.<br>
-                        <a href="https://www.fnac.com/SearchResult/Result.aspx?SCat=0%211&Search=guide+de+la+paie&sft=1&sa=0" target="_blank" class="text-accent-main hover:underline font-bold">Recherche sur FNAC</a> |
-                        <a href="https://www.cultura.com/recherche/resultats?search=la%20paie%20tout%20en%20un" target="_blank" class="text-accent-main hover:underline font-bold">Recherche sur Cultura</a>
-                    </li>
-                    <li>
-                        <strong>La Convention Collective Nationale (CCN)</strong> de la branche d'activité concernée : Document essentiel pour un gestionnaire de paie, contenant les règles spécifiques (salaires minima, primes, congés, préavis) qui priment sur le Code du travail. À consulter impérativement en fonction de votre secteur.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bg-yellow-50 p-6 rounded-lg shadow-inner mb-8">
-                <h3 class="text-xl font-semibold text-orange-700 mt-2 mb-4">III. 🌐 Ressources Officielles : Votre Boussole dans l'Administration Française</h3>
-                <p class="mb-4 text-gray-700">Naviguer dans les méandres de la réglementation française est crucial pour tout gestionnaire de paie. Ces liens directs vers les services d'administration sont vos sources primaires d'information, constamment mises à jour et fiables.</p>
-                <ul class="list-disc list-inside space-y-3">
-                    <li>
-                        <strong>URSSAF</strong> (Union de recouvrement des cotisations de Sécurité sociale et d'allocations familiales) : Le portail incontournable pour les cotisations sociales, les déclarations et les actualités réglementaires.<br>
-                        <a href="https://www.urssaf.fr/portail/home.html" target="_blank" class="text-accent-main hover:underline font-bold">urssaf.fr</a>
-                    </li>
-                    <li>
-                        <strong>Net-Entreprises.fr</strong> : Le site unique pour les déclarations sociales et fiscales des entreprises. Indispensable pour la DSN (Déclaration Sociale Nominative).<br>
-                        <a href="https://www.net-entreprises.fr/" target="_blank" class="text-accent-main hover:underline font-bold">net-entreprises.fr</a>
-                    </li>
-                    <li>
-                        <strong>Service-Public.fr</strong> (Particuliers et Professionnels) : Une mine d'informations sur le droit du travail, les obligations employeurs et les démarches administratives générales.<br>
-                        <a href="https://www.service-public.fr/" target="_blank" class="text-accent-main hover:underline font-bold">service-public.fr</a>
-                    </li>
-                    <li>
-                        <strong>Legifrance.gouv.fr</strong> : Le site officiel de diffusion des textes législatifs et réglementaires. Pour consulter le Code du travail, les conventions collectives et les décrets.<br>
-                        <a href="https://www.legifrance.gouv.fr/" target="_blank" class="text-accent-main hover:underline font-bold">legifrance.gouv.fr</a>
-                    </li>
-                    <li>
-                        <strong>Ministère du Travail, de l'Emploi et de l'Insertion</strong> : Pour les actualités sur la politique de l'emploi, le droit du travail et les réformes sociales.<br>
-                        <a href="https://travail-emploi.gouv.fr/" target="_blank" class="text-accent-main hover:underline font-bold">travail-emploi.gouv.fr</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bg-purple-50 p-6 rounded-lg shadow-inner">
-                <h3 class="text-xl font-semibold text-pink-700 mt-2 mb-4">IV. 📚 Pause Lecture : Détente et Évasion Littéraire</h3>
-                <p class="mb-4 text-gray-700">Parce que l'apprentissage est aussi une question d'équilibre, offrez-vous des moments d'évasion. Plongez dans ces romans populaires, polars palpitants ou histoires d'amour captivantes, parfaits pour recharger vos batteries et stimuler votre imagination.</p>
-                
-                <h4 class="font-bold text-lg text-pink-600 mt-6 mb-3">🕵️‍♂️ Romans Polars / Thrillers (derniers mois)</h4>
-                <ul class="list-disc list-inside space-y-3">
-                    <li>
-                        <strong>Implacable</strong> de Ragnar Jónasson : Laissez-vous emporter par le suspense glaçant d'un maître du polar islandais.<br>
-                        <a href="https://www.fnac.com/a18903328/Ragnar-Jonasson-Implacable" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-implacable-9782264082216.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>La Fille d'avant</strong> de JP Delaney : Un thriller psychologique addictif qui vous tiendra en haleine jusqu'à la dernière page.<br>
-                        <a href="https://www.fnac.com/a10403719/JP-Delaney-La-fllle-d-avant" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-la-fille-d-avant-9782253011388.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>Le Silence des Agneaux</strong> de Thomas Harris : Un classique indémodable du thriller, pour les amateurs de psychologie sombre et de frissons.<br>
-                        <a href="https://www.fnac.com/a1075677/Thomas-Harris-Le-silence-des-agneaux" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-le-silence-des-agneaux-9782253053418.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                </ul>
-
-                <h4 class="font-bold text-lg text-pink-600 mt-6 mb-3">❤️‍🔥 Romans d'Amour (derniers mois)</h4>
-                <ul class="list-disc list-inside space-y-3">
-                    <li>
-                        <strong>Captive</strong> de Sarah Rivens : Une romance intense et passionnée qui a conquis des milliers de lecteurs.<br>
-                        <a href="https://www.fnac.com/a18012010/Sarah-Rivens-Captive-Tome-1" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-captive-tome-1-9782384120392.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>The Love Hypothesis</strong> d'Ali Hazelwood : Une comédie romantique moderne, pleine d'humour et de charme, dans un cadre inattendu.<br>
-                        <a href="https://www.fnac.com/a17163004/Ali-Hazelwood-The-Love-Hypothesis" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-the-love-hypothesis-9782017195415.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>Un palace en hiver</strong> de Mary Kay Andrews : Une lecture réconfortante et pleine de douceur, idéale pour s'évaluer.<br>
-                        <a href="https://www.fnac.com/a18978713/Mary-Kay-Andrews-Un-palace-en-hiver" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-un-palace-en-hiver-9782280287950.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                </ul>
-
-                <h4 class="font-bold text-lg text-pink-600 mt-6 mb-3">✨ Romans Feel-Good & Évasion</h4>
-                <ul class="list-disc list-inside space-y-3">
-                    <li>
-                        <strong>Le café du bout du monde</strong> de John Strelecky : Une histoire philosophique et inspirante sur la quête de soi et le sens de la vie, très agréable à lire pour se changer les idées.<br>
-                        <a href="https://www.fnac.com/a11409559/John-Strelecky-Le-cafe-du-bout-du-monde" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-le-cafe-du-bout-du-monde-9782253246834.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>Harry Potter à l'école des sorciers</strong> de J.K. Rowling : Un classique intemporel qui plaît à un très large public. Une pure évasion dans un monde magique, loin des tracas du quotidien.<br>
-                        <a href="https://www.fnac.com/a1074810/J-K-Rowling-Harry-Potter-A-l-ecole-des-sorciers" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-harry-potter-a-l-ecole-des-sorciers-9782070643028.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                    <li>
-                        <strong>Dune</strong> de Frank Herbert : Un monument de la science-fiction qui mêle écologie, politique, religion et psychologie. Une lecture plus dense, mais incroyablement enrichissante.<br>
-                        <a href="https://www.fnac.com/a18880311/Frank-Herbert-Dune" target="_blank" class="text-accent-main hover:underline font-bold">FNAC</a> |
-                        <a href="https://www.cultura.com/p-dune-cycle-de-dune-tome-1-9782070386920.html" target="_blank" class="text-accent-main hover:underline font-bold">Cultura</a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
@@ -1426,6 +1074,7 @@ B3_M5_010_Synthèse et application : Assister les utilisateurs du SIRH`;
                         "La participation au transport collectif",
                         "Le 13ème mois",
                         "La prime de risque",
+                        "La prime sur objectif calculé sur la performance du salarié",
                         "La prime sur objectif calculé sur la performance du salarié",
                         "Tous les éléments de rémunération dès lors qu’ils ont été indiqués dans le contrat de travail"
                     ],
@@ -2842,22 +2491,7 @@ B3_M5_010_Synthèse et application : Assister les utilisateurs du SIRH`;
 
 
             // --- ÉCOUTEURS POUR LES MODALES ---
-
-            // Modale "Checklist Jour J"
-            document.getElementById('open-checklist-modal')?.addEventListener('click', () => openModal('checklist-modal'));
-            document.getElementById('close-checklist-modal')?.addEventListener('click', () => closeModal('checklist-modal'));
-            
-            // Modale "Détails Certification"
-            document.getElementById('open-certif-details-modal')?.addEventListener('click', () => openModal('certif-details-modal'));
-            document.getElementById('close-certif-details-modal')?.addEventListener('click', () => closeModal('certif-details-modal'));
-
-            // Modale "Infos Complémentaires"
-            document.getElementById('open-infos-comp-modal')?.addEventListener('click', () => openModal('infos-comp-modal'));
-            document.getElementById('close-infos-comp-modal')?.addEventListener('click', () => closeModal('infos-comp-modal'));
-
-            // Modale "Votre Bibliothèque Idéale"
-            document.getElementById('open-library-modal')?.addEventListener('click', () => openModal('library-modal'));
-            document.getElementById('close-library-modal')?.addEventListener('click', () => closeModal('library-modal'));
+            // Les écouteurs pour les modales supprimées ont été retirés ici.
 
             // --- Fonctions du quiz ---
             document.getElementById('quiz-submit-button')?.addEventListener('click', submitQuizAnswer);
