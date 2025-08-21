@@ -303,44 +303,6 @@
             color: #6B7280; /* Darker gray for checked items in dark mode */
         }
 
-        /* Correction for library modal text color in light theme */
-        #library-modal .modal-content {
-            color: #3d4f60; /* Ensure main text color is dark in light theme */
-        }
-
-        #library-modal .modal-content h2,
-        #library-modal .modal-content h3,
-        #library-modal .modal-content h4,
-        #library-modal .modal-content p,
-        #library-modal .modal-content ul li {
-            color: #3d4f60; /* Apply the dark text color explicitly to all text elements */
-        }
-
-        /* Ensure dark theme text color for library modal is also explicit and readable */
-        body.dark-theme #library-modal .modal-content h2,
-        body.dark-theme #library-modal .modal-content h3,
-        body.dark-theme #library-modal .modal-content h4,
-        body.dark-theme #library-modal .modal-content p,
-        body.dark-theme #library-modal .modal-content ul li {
-            color: #E2E8F0; /* slate-200 for dark theme */
-        }
-        
-        /* Correction additionnelle pour les arrière-plans des sections de la bibliothèque en mode sombre */
-        body.dark-theme #library-modal .bg-blue-50,
-        body.dark-theme #library-modal .bg-green-50,
-        body.dark-theme #library-modal .bg-yellow-50,
-        body.dark-theme #library-modal .bg-purple-50 {
-            background-color: #2D3748; /* Une nuance de gris plus foncée pour mieux contraster avec le texte clair */
-        }
-
-        body.dark-theme #library-modal .text-indigo-700,
-        body.dark-theme #library-modal .text-teal-700,
-        body.dark-theme #library-modal .text-orange-700,
-        body.dark-theme #library-modal .text-pink-700,
-        body.dark-theme #library-modal .text-pink-600 {
-            color: #93C5FD; /* Utilisation d'une couleur d'accentuation plus claire pour les titres des sections en mode sombre */
-        }
-
         /* COULEURS DES BARRES DE PROGRESSION (ROSE VIF) */
         .bg-progress-bright {
             background-color: #FF69B4 !important; /* Rose éclatant */
@@ -442,14 +404,22 @@
             </div>
 
             <div class="mt-6 flex flex-wrap justify-center gap-4 header-no-print">
+                <!-- Nouveau bouton "Compétences Certification" -->
+                <a href="https://mmpa1974.github.io/Competences-Epreuve-Gestionnaire-Paie/" target="_blank" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
+                    Compétences Certification 🎓
+                </a>
+                <!-- Nouvel onglet pour la Rétrospective/Révision -->
+                <a href="https://mmpa1974.github.io/Programme-de-Revision-Gestionnaire-de-Paie/" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
+                    Rétrospective 🔄
+                </a>
                 <a href="https://mmpa1974.github.io/Acronyme-Paie-Academy---Guide-Ultime/" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
                     Acronymes 🚀
                 </a>
                 <a href="https://mmpa1974.github.io/Glossaire-de-la-Paie-et-RH-Votre-Compagnon-Expert/" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
                     Glossaire 📖
                 </a>
-                <a href="https://docs.google.com/spreadsheets/d/12Z3vh4jJ9_5kZDF5WkSkTdl_2-WxqDlL8YB7_B9BguI/edit?gid=0#gid=0" target="_blank" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
-                    Révision 📝
+                <a href="https://docs.google.com/spreadsheets/d/1YhIAY5T-QtgUosEMBvwaXpnJy1PZTz-g/edit?gid=2133505070#gid=2133505070" target="_blank" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-300 flex items-center gap-2">
+                    Centre de Ressources 📝
                 </a>
             </div>
         </header>
@@ -460,11 +430,11 @@
                 <p id="days-left" class="text-5xl font-bold text-accent-main">95</p>
             </div>
             <div class="section-card p-6">
-                    <h2 class="text-lg font-semibold text-gray-700 mb-3 text-center">Progression Totale 🎯</h2>
-                    <div class="w-full bg-gray-200 rounded-full h-4">
-                        <div id="progress-bar" class="bg-progress-bright h-4 rounded-full transition-all duration-500" style="width: 0%"></div>
-                    </div>
-                    <p id="progress-text" class="text-center mt-2 text-sm text-gray-600">0% complété</p>
+                        <h2 class="text-lg font-semibold text-gray-700 mb-3 text-center">Progression Totale 🎯</h2>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div id="progress-bar" class="bg-progress-bright h-4 rounded-full transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                        <p id="progress-text" class="text-center mt-2 text-sm text-gray-600">0% complété</p>
             </div>
             <div class="section-card p-6 flex flex-col justify-center items-center">
                 <h2 class="text-lg font-semibold text-gray-700 mb-2">Phase Actuelle 💡</h2>
@@ -543,11 +513,7 @@
         </footer>
     </div>
 
-    <!-- Modals removed as per user request -->
-    <!-- Checklist Modal (Removed) -->
-    <!-- Certification Details Modal (Removed) -->
-    <!-- Infos Complémentaires Modal (Removed) -->
-    <!-- Bibliothèque Modal (Removed) -->
+    <!-- The modals that were removed: checklist-modal, certif-details-modal, infos-comp-modal, library-modal -->
 
     <div id="quiz-modal" class="modal">
         <div class="modal-content quiz-modal-content">
@@ -853,8 +819,8 @@ B3_M5_010_Synthèse et application : Assister les utilisateurs du SIRH`;
             { id: 's12', title: 'Semaine 12: Mise en Pratique Intensive 🛠️', durationDays: 8, phase: 2, modules: [ // +1 day
                 { title: 'Pratique et Entraînement Chronométré ⏱️', quizId: 'S12_Pratique_Intensive', tasks: [
                     {text: 'Réaliser des cas pratiques complets de paie (de A à Z) en conditions réelles de temps.'},
-                    {text: 'Simuler la gestion de situations complexes (ex: régularisations, ruptures conventionnelles).'},
-                    {text: 'S\'entraîner à la saisie et au contrôle des données dans un outil de paie simulé (si disponible).'},
+                    {text: 'Simuler la gestion d\'un cycle de paie complet sur un mois donné.'},
+                    {text: 'S\'entraîner à la saisie et au contrôle des données dans un outil de paie simulé (if available).'},
                     {text: 'Révisez les aspects procéduraux : déclarations, attestations, documents de fin de contrat.'},
                     {text: 'Développer des réflexes pour identifier rapidement les erreurs courantes.'}
                 ]}
@@ -1218,7 +1184,7 @@ B3_M5_010_Synthèse et application : Assister les utilisateurs du SIRH`;
                     correctAnswer: "Vrai"
                 },
                 {
-                    question: "Le certificat de travail est un document obligatoire à remettre au salarié à la fin de son contrat.",
+                    question: "Le certificat de travail est un document obligatoire à remettre au salarié à la date de fin de son contrat.",
                     options: ["Vrai", "Faux"],
                     correctAnswer: "Vrai"
                 },
@@ -1640,9 +1606,9 @@ B3_M5_010_Synthèse et application : Assister les utilisateurs du SIRH`;
                                 if (courseData) {
                                     const courseIsChecked = completedCourses.has(courseId) ? 'checked' : '';
                                     html += `<li class="course-item flex items-center">
-                                                        <input type="checkbox" id="suggested-course-${courseId}" class="h-3 w-3 rounded border-gray-300 text-purple-500 focus:ring-purple-500" ${courseIsChecked} data-course-id="${courseId}">
-                                                        <label for="course-${courseId}" class="ml-2 block text-xs flex-grow">${courseData.code}: ${courseData.title}</label>
-                                                    </li>`;
+                                                    <input type="checkbox" id="suggested-course-${courseId}" class="h-3 w-3 rounded border-gray-300 text-purple-500 focus:ring-purple-500" ${courseIsChecked} data-course-id="${courseId}">
+                                                    <label for="course-${courseId}" class="ml-2 block text-xs flex-grow">${courseData.code}: ${courseData.title}</label>
+                                                </li>`;
                                 }
                             });
                             html += `</ul></div>`;
@@ -1691,7 +1657,7 @@ B3_M5_010_Synthèse et application : Assister les utilisateurs du SIRH`;
             // Le re-render de showDetails() va recharger les états des cases
             const currentWeekId = document.getElementById('timeline-select').value;
             if (currentWeekId) {
-                showDetails(currentWeekId); 
+                showDetails(currentWeekId);  
             }
         }
 
@@ -2062,7 +2028,7 @@ B3_M5_010_Synthèse et application : Assister les utilisateurs du SIRH`;
                     const moduleId = `module-${moduleTitleKey.replace(/[^a-zA-Z0-9]/g, '-')}`; // Sanitize for ID
                     const isModuleCollapsed = collapsedModules.has(moduleId);
                     const moduleProgress = getProgressForContainer(moduleTitleKey, 'module');
-                    const moduleProgressText = `${moduleProgress.completed}/${moduleProgress.total} documents (${moduleProgress.percentage}%)`;
+                    const moduleProgressText = `${moduleProgress.completed}/${moduleProgress.percentage} documents (${moduleProgress.percentage}%)`;
 
                     html += `
                                 <div class="p-3 border rounded-lg card-inner-bg">
@@ -2177,12 +2143,12 @@ B3_M5_010_Synthèse et application : Assister les utilisateurs du SIRH`;
                         completedTasks.add(idToToggle);
                     }
                     saveUserData();
-                    console.log('Task Checkbox Change - completedTasks:', Array.from(completedTasks));
+                    console.log('toggleTask - completedTasks:', Array.from(completedTasks));
                     playTaskToggleSound();
                     updateProgress();
                     const currentWeekId = document.getElementById('timeline-select').value;
                     if (currentWeekId) {
-                        showDetails(currentWeekId); 
+                        showDetails(currentWeekId);  
                     }
                 } else { // It's a course item
                     if (completedCourses.has(idToToggle)) {
@@ -2491,7 +2457,6 @@ B3_M5_010_Synthèse et application : Assister les utilisateurs du SIRH`;
 
 
             // --- ÉCOUTEURS POUR LES MODALES ---
-            // Les écouteurs pour les modales supprimées ont été retirés ici.
 
             // --- Fonctions du quiz ---
             document.getElementById('quiz-submit-button')?.addEventListener('click', submitQuizAnswer);
